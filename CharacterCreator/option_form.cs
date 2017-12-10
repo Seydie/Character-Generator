@@ -12,15 +12,23 @@ namespace CharacterCreator
 {
     public partial class option_form : Form
     {
+
         public option_form()
         {
             InitializeComponent();
         }
 
-        private void bnext_Click(object sender, EventArgs e)
+        public void bnext_Click(object sender, EventArgs e)
         {
+            this.Hide();
             generate_form Fgenerate = new generate_form();
-            Fgenerate.Show();
+            Fgenerate.ShowDialog();
+            this.Close();
+        }
+
+        public void variable(object sender, EventArgs e)
+        {
+            string test = "Test werkt";
         }
     }
 }
