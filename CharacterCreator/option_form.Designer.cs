@@ -1,6 +1,6 @@
 ﻿namespace CharacterCreator
 {
-    partial class Form1
+    partial class option_form
     {
         /// <summary>
         /// Required designer variable.
@@ -38,20 +38,23 @@
             this.bnext.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bnext.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bnext.ForeColor = System.Drawing.SystemColors.Window;
-            this.bnext.Location = new System.Drawing.Point(680, 323);
+            this.bnext.Location = new System.Drawing.Point(907, 398);
+            this.bnext.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.bnext.Name = "bnext";
-            this.bnext.Size = new System.Drawing.Size(162, 38);
+            this.bnext.Size = new System.Drawing.Size(216, 47);
             this.bnext.TabIndex = 0;
             this.bnext.Text = "Next";
             this.bnext.UseVisualStyleBackColor = false;
+            this.bnext.Click += new System.EventHandler(this.bnext_Click);
             // 
-            // Form1
+            // option_form
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(854, 373);
+            this.ClientSize = new System.Drawing.Size(1139, 459);
             this.Controls.Add(this.bnext);
-            this.Name = "Form1";
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Name = "option_form";
             this.Text = "Character generator";
             this.ResumeLayout(false);
 
