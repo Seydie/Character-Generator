@@ -18,22 +18,14 @@ namespace CharacterCreator
         {
             InitializeComponent();
         }
-        public string Test
-        {
-
-            get; set;
-        }
 
         public void bnext_Click(object sender, EventArgs e)
         {
             this.Hide();
+            Fgenerate.test = test;
+            Fgenerate.Generate();
             Fgenerate.ShowDialog();
             this.Close();
-        }
-
-        public void variable(object sender, EventArgs e)
-        {
-            string test = "Test werkt";
         }
     }
 }
