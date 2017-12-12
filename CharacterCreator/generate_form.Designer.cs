@@ -36,6 +36,8 @@
             this.label4 = new System.Windows.Forms.Label();
             this.Ggender = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
+            this.Gfaction = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // name
@@ -83,7 +85,7 @@
             // Grace
             // 
             this.Grace.AutoSize = true;
-            this.Grace.Location = new System.Drawing.Point(67, 114);
+            this.Grace.Location = new System.Drawing.Point(67, 115);
             this.Grace.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Grace.Name = "Grace";
             this.Grace.Size = new System.Drawing.Size(24, 13);
@@ -94,7 +96,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(12, 114);
+            this.label4.Location = new System.Drawing.Point(12, 115);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(41, 13);
@@ -122,11 +124,34 @@
             this.label6.TabIndex = 4;
             this.label6.Text = "Gender:";
             // 
+            // Gfaction
+            // 
+            this.Gfaction.AutoSize = true;
+            this.Gfaction.Location = new System.Drawing.Point(67, 137);
+            this.Gfaction.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.Gfaction.Name = "Gfaction";
+            this.Gfaction.Size = new System.Drawing.Size(24, 13);
+            this.Gfaction.TabIndex = 9;
+            this.Gfaction.Text = "hier";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(12, 137);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(53, 13);
+            this.label3.TabIndex = 8;
+            this.label3.Text = "Faction:";
+            // 
             // generate_form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(689, 338);
+            this.Controls.Add(this.Gfaction);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.Grace);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.Ggender);
@@ -153,5 +178,7 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label Ggender;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label Gfaction;
+        private System.Windows.Forms.Label label3;
     }
 }

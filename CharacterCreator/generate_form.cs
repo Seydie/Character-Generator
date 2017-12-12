@@ -16,7 +16,7 @@ namespace CharacterCreator
         string[] Arraygender = { "Male", "Female" };
         string[] Arrayclass = { "Warrior", "Paladin", "Hunter", "Rogue", "Shaman", "Monk", "Mage", "Warlock", "Priest", "Druid", "Death Knight", "Demon Hunter" };
         string[] ArrayArace = { "Human", "Dwarf", "Gnome", "Draenei", "Worgen", "Night Elf" };
-        string[] ArrayHrace = { "Orc", "Troll", "Goblin", "Undead", "Blood Elf", "Tauren" };
+        string[] ArrayHrace = { "Orc", "Troll", "Goblin", "Undead", "Blood Elf", "Tauren", "Panda" };
         
 
         public option_form frm1;
@@ -29,10 +29,20 @@ namespace CharacterCreator
         {
             Ggender.Text = Arraygender[random.Next(Arraygender.Length)];
             Gclass.Text = Arrayclass[random.Next(Arrayclass.Length)];
+
             string testt = ArrayArace[random.Next(ArrayArace.Length)];
             string testt2 = ArrayHrace[random.Next(ArrayHrace.Length)];
             string[] testt3 = { testt, testt2 };
-            Grace.Text = testt3[random.Next(testt3.Length)];
+            string testt4 = testt3[random.Next(testt3.Length)];
+            Grace.Text = testt4;
+            if (ArrayArace.Contains(testt4))
+            {
+                Gfaction.Text = "Alliance";
+            }
+            if (ArrayHrace.Contains(testt4))
+            {
+                Gfaction.Text = "Horde";
+            }
 
 
 
