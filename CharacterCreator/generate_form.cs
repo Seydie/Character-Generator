@@ -19,19 +19,19 @@ namespace CharacterCreator
         string[] ArrayHrace = { "Orc", "Troll", "Goblin", "Undead", "Blood Elf", "Tauren", "Panda" };
         Dictionary<string, string[]> dict_races = new Dictionary<string, string[]>()
         {
-          {"Human", new string[] {"Warrior", "Monk"}},
-          {"Dwarf", new string[] {"Warrior", "Hunter"}},
-          {"Gnome", new string[] {"Priest", "Mage", "Warlock" , "Death Knight", "Hunter"}},
-          {"Draenei", new string[] {"Mage"}},
-          {"Worgen", new string[] {"Rogue", "Death Knight", "Mage"}},
-          {"Night Elf", new string[] {"Warrior", "Druid", "Demon Hunter"}},
-          {"Orc", new string[] {"Warrior", "Hunter", "Death Knight"}},
-          {"Troll", new string[] {"Priest", "Hunter"}},
-          {"Goblin", new string[] {"Shaman" }},
-          {"Undead", new string[] {"Rogue"}},
-          {"Blood Elf", new string[] {"Warrior", "Rogue", "Demon Hunter", "Mage", "Warlock"}},
-          {"Tauren", new string[] {"Paladin", "Druid", "Death Knight"}},
-          {"Panda", new string[] {"Warrior", "Monk", "Priest", "Hunter"}}
+          {"Human", new string[] {"Warrior", "Paladin", "Hunter", "Rogue", "Priest", "Mage", "Warlock", "Monk", "Death Knight"}},
+          {"Dwarf", new string[] {"Warrior", "Paladin", "Hunter", "Rogue", "Priest", "Shaman", "Mage", "Warlock", "Monk", "Death Knight"}},
+          {"Night Elf", new string[] {"Warrior", "Hunter", "Rogue", "Priest", "Mage", "Monk", "Druid", "Demon Hunter", "Death Knight"}},
+          {"Gnome", new string[] {"Warrior", "Hunter", "Rogue", "Priest", "Mage", "Warlock", "Monk", "Death Knight"}},
+          {"Draenei", new string[] {"Warrior", "Paladin", "Hunter", "Priest", "Shaman", "Mage", "Monk", "Death Knight"}},
+          {"Worgen", new string[] {"Warrior", "Hunter", "Rogue", "Priest", "Mage", "Warlock", "Druid", "Death Knight"}},
+          {"Orc", new string[] {"Warrior", "Hunter", "Rogue", "Shaman", "Mage", "Warlock", "Monk", "Death Knight"}},
+          {"Undead", new string[] {"Warrior", "Humter","Rogue", "Priest", "Mage", "Warlock", "Monk", "Death Knight"}},
+          {"Tauren", new string[] {"Warrior", "Paladin", "Hunter", "Priest", "Shaman", "Monk", "Druid", "Death Knight"}},
+          {"Troll", new string[] {"Warrior", "Hunter", "Rogue", "Priest", "Shaman", "Mage", "Warlock", "Monk", "Druid", "Death Knight"}},
+          {"Blood Elf", new string[] {"Warrior", "Paladin", "Hunter", "Rogue", "Priest", "Mage", "Warlock", "Monk", "Demon Hunter", "Death Knight"}},
+          {"Goblin", new string[] {"Warrior", "Hunter", "Rogue", "Priest", "Shaman", "Mage", "Warlock", "Death Knight"}},
+          {"Panda", new string[] {"Warrior", "Hunter", "Rogue", "Priest", "Shaman", "Mage", "Monk"}}
         };
 
         Dictionary<string, string[]> dict_specalisation = new Dictionary<string, string[]>()
