@@ -61,24 +61,11 @@ namespace CharacterCreator
         {
             Ggender.Text = Arraygender[random.Next(Arraygender.Length)];
             Gclass.Text = Arrayclass[random.Next(Arrayclass.Length)];
-
-            string Random_Alliance_Race = ArrayArace[random.Next(ArrayArace.Length)];
-            string Random_Horde_Race = ArrayHrace[random.Next(ArrayHrace.Length)];
-            string[] Race_Array = { Random_Alliance_Race, Random_Horde_Race };
-            string Random_Race = Race_Array[random.Next(Race_Array.Length)];
-            Grace.Text = Random_Race;
-
-            if (ArrayArace.Contains(Random_Race))
-            {
-                Gfaction.Text = "Alliance";
-            }
-            if (ArrayHrace.Contains(Random_Race))
-            {
-                Gfaction.Text = "Horde";
-            }
-
-
-
+            string race = dict_races.Keys.ToList()[random.Next(dict_races.Count)];
+            string[] race_value = dict_races.Values.ToList()[random.Next(dict_races.Count)];
+            string race_int = race_value[random.Next(race_value.Length)];
+            Grace.Text = race;
+            Grace.Text += " + " + race_int;
         }
     }
 }
