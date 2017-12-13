@@ -7,12 +7,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Linq;
 
 namespace CharacterCreator
 {
     public partial class generate_form : Form
     {
+        public CheckedListBox.CheckedItemCollection exclude_c;
         static Random random = new Random();
         string[] Arraygender = { "Male", "Female" };
         string[] Arrayclass = { "Warrior", "Paladin", "Hunter", "Rogue", "Shaman", "Monk", "Mage", "Warlock", "Priest", "Druid", "Death Knight", "Demon Hunter" };
@@ -54,7 +54,7 @@ namespace CharacterCreator
 
         public option_form frm1;
         public string test;
-        public ListBox.SelectedObjectCollection exclude_c;
+
         public generate_form()
 
         {
@@ -66,12 +66,13 @@ namespace CharacterCreator
 
             string race_key = dict_races.Keys.ToList()[random.Next(dict_races.Count)];
             Grace.Text = race_key;
-            List<string> items = exclude_c.Cast<string>().ToList();
+            //List<string> items = exclude_c.Cast<string>().ToList();
             string race_value = dict_races[race_key][random.Next(dict_races[race_key].Length)];
 
             for (int i = 0; i <= exclude_c.Count; ++i)
             {
-                if (items.Any(str => str == race_value))
+                //if (items.Any(str => str == race_value))
+                if (race_value == Convert.ToString(exclude_c[i]))
                 {
                     Generate();
                     //race_value = dict_races[race_key][random.Next(dict_races[race_key].Length)];

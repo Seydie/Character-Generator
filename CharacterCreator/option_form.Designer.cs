@@ -44,10 +44,9 @@
             this.bnext.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bnext.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bnext.ForeColor = System.Drawing.SystemColors.Window;
-            this.bnext.Location = new System.Drawing.Point(455, 398);
-            this.bnext.Margin = new System.Windows.Forms.Padding(4);
+            this.bnext.Location = new System.Drawing.Point(341, 323);
             this.bnext.Name = "bnext";
-            this.bnext.Size = new System.Drawing.Size(216, 47);
+            this.bnext.Size = new System.Drawing.Size(162, 38);
             this.bnext.TabIndex = 0;
             this.bnext.Text = "Next";
             this.bnext.UseVisualStyleBackColor = false;
@@ -57,9 +56,10 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(13, 13);
+            this.label1.Location = new System.Drawing.Point(10, 11);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(460, 29);
+            this.label1.Size = new System.Drawing.Size(359, 25);
             this.label1.TabIndex = 1;
             this.label1.Text = "World of Warcraft - Character Generator";
             // 
@@ -67,9 +67,10 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(15, 77);
+            this.label2.Location = new System.Drawing.Point(11, 63);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(119, 18);
+            this.label2.Size = new System.Drawing.Size(98, 15);
             this.label2.TabIndex = 2;
             this.label2.Text = "Exclude classes:";
             // 
@@ -80,10 +81,9 @@
             this.Bexit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Bexit.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Bexit.ForeColor = System.Drawing.SystemColors.Window;
-            this.Bexit.Location = new System.Drawing.Point(13, 398);
-            this.Bexit.Margin = new System.Windows.Forms.Padding(4);
+            this.Bexit.Location = new System.Drawing.Point(10, 323);
             this.Bexit.Name = "Bexit";
-            this.Bexit.Size = new System.Drawing.Size(216, 47);
+            this.Bexit.Size = new System.Drawing.Size(162, 38);
             this.Bexit.TabIndex = 3;
             this.Bexit.Text = "Exit";
             this.Bexit.UseVisualStyleBackColor = false;
@@ -108,18 +108,20 @@
             "Druid",
             "Demon Hunter",
             "Death Knight"});
-            this.exclude_classes.Location = new System.Drawing.Point(18, 108);
+            this.exclude_classes.Location = new System.Drawing.Point(14, 88);
+            this.exclude_classes.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.exclude_classes.Name = "exclude_classes";
-            this.exclude_classes.Size = new System.Drawing.Size(150, 140);
+            this.exclude_classes.Size = new System.Drawing.Size(114, 109);
             this.exclude_classes.TabIndex = 4;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(214, 77);
+            this.label3.Location = new System.Drawing.Point(160, 63);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(105, 18);
+            this.label3.Size = new System.Drawing.Size(87, 15);
             this.label3.TabIndex = 5;
             this.label3.Text = "Exclude races:";
             // 
@@ -143,16 +145,17 @@
             "Blood Elf",
             "Goblin",
             "Panda"});
-            this.checkedListBox2.Location = new System.Drawing.Point(217, 108);
+            this.checkedListBox2.Location = new System.Drawing.Point(163, 88);
+            this.checkedListBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.checkedListBox2.Name = "checkedListBox2";
-            this.checkedListBox2.Size = new System.Drawing.Size(150, 140);
+            this.checkedListBox2.Size = new System.Drawing.Size(114, 109);
             this.checkedListBox2.TabIndex = 6;
             // 
             // option_form
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(684, 459);
+            this.ClientSize = new System.Drawing.Size(513, 373);
             this.Controls.Add(this.checkedListBox2);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.exclude_classes);
@@ -160,7 +163,6 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.bnext);
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.Name = "option_form";
             this.Text = "Character generator";

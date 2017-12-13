@@ -21,7 +21,7 @@ namespace CharacterCreator
 
         public void bnext_Click(object sender, EventArgs e)
         {
-            var exclude_c = exclude_classes.SelectedItems;
+            var exclude_c = exclude_classes.CheckedItems;
             this.Hide();
             Fgenerate.test = test;
             Fgenerate.exclude_c = exclude_c;
