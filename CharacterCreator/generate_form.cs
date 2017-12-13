@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Linq;
 
 namespace CharacterCreator
 {
@@ -36,18 +37,18 @@ namespace CharacterCreator
 
         Dictionary<string, string[]> dict_specalisation = new Dictionary<string, string[]>()
         {
-            {"Warrior", new string[] {"Fury"}},
-            {"Paladin", new string[] {"Retribution", "Holy"}},
-            {"Hunter", new string[] {"Beast Mastery"}},
-            {"Rogue", new string[] {"Assassin"}},
-            {"Shaman", new string[] {"Fury"}},
-            {"Mage", new string[] {"Frost", "Fire", "Arcane"}},
-            {"Priest", new string[] {"Fury"}},
-            {"Warlock", new string[] {"Fury"}},
-            {"Monk", new string[] {"Fury"}},
-            {"Druid", new string[] {"Feral"}},
-            {"Death Knight", new string[] {"Fury"}},
-            {"Demon Hunter", new string[] {"Havoc"}}
+            {"Warrior", new string[] {"Arms", "Fury", "Protection"}},
+            {"Paladin", new string[] {"Holy", "Protection", "Retribution"}},
+            {"Hunter", new string[] {"Beast Mastery", "Marksmanship", "Survival"}},
+            {"Rogue", new string[] {"Assassination", "Outlaw", "Sublety"}},
+            {"Shaman", new string[] {"Elemental", "Enhancement", "Restoration"}},
+            {"Mage", new string[] {"Arcane", "Fire", "Frost"}},
+            {"Priest", new string[] {"Discipline", "Holy", "Shadow"}},
+            {"Warlock", new string[] {"Affliction", "Demonology", "Destruction"}},
+            {"Monk", new string[] {"Brewmaster", "Mistweaver", "Windwalker"}},
+            {"Druid", new string[] {"Balance", "Feral", "Guardian", "Restoration"}},
+            {"Death Knight", new string[] {"Blood", "Frost", "Unholy"}},
+            {"Demon Hunter", new string[] {"Havoc", "Vengeance"}}
         };
 
 
@@ -55,6 +56,7 @@ namespace CharacterCreator
         public string test;
         public ListBox.SelectedObjectCollection exclude_c;
         public generate_form()
+
         {
             InitializeComponent();
         }
@@ -63,11 +65,22 @@ namespace CharacterCreator
             Ggender.Text = Arraygender[random.Next(Arraygender.Length)];
 
             string race_key = dict_races.Keys.ToList()[random.Next(dict_races.Count)];
+            Grace.Text = race_key;
+            List<string> items = exclude_c.Cast<string>().ToList();
             string race_value = dict_races[race_key][random.Next(dict_races[race_key].Length)];
 
-            Grace.Text = race_key;
-            Gclass.Text = race_value;
-            Gclass.Text += exclude_c[0];
+            for (int i = 0; i <= exclude_c.Count; ++i)
+            {
+                if (items.Any(str => str == race_value))
+                {
+                    Generate();
+                    //race_value = dict_races[race_key][random.Next(dict_races[race_key].Length)];
+                }
+                else
+                {
+                    Gclass.Text = race_value;
+                }
+            }
             
         }
 
