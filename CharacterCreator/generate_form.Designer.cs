@@ -38,36 +38,34 @@
             this.label6 = new System.Windows.Forms.Label();
             this.Gfaction = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.Bretry = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // name
             // 
             this.name.AutoSize = true;
             this.name.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.name.Location = new System.Drawing.Point(10, 47);
-            this.name.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.name.Location = new System.Drawing.Point(13, 58);
             this.name.Name = "name";
-            this.name.Size = new System.Drawing.Size(43, 13);
+            this.name.Size = new System.Drawing.Size(54, 17);
             this.name.TabIndex = 0;
             this.name.Text = "Name:";
             // 
             // Gname
             // 
             this.Gname.AutoSize = true;
-            this.Gname.Location = new System.Drawing.Point(67, 47);
-            this.Gname.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.Gname.Location = new System.Drawing.Point(89, 58);
             this.Gname.Name = "Gname";
-            this.Gname.Size = new System.Drawing.Size(24, 13);
+            this.Gname.Size = new System.Drawing.Size(32, 17);
             this.Gname.TabIndex = 1;
             this.Gname.Text = "hier";
             // 
             // Gclass
             // 
             this.Gclass.AutoSize = true;
-            this.Gclass.Location = new System.Drawing.Point(68, 69);
-            this.Gclass.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.Gclass.Location = new System.Drawing.Point(91, 85);
             this.Gclass.Name = "Gclass";
-            this.Gclass.Size = new System.Drawing.Size(24, 13);
+            this.Gclass.Size = new System.Drawing.Size(32, 17);
             this.Gclass.TabIndex = 3;
             this.Gclass.Text = "hier";
             // 
@@ -75,20 +73,18 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(11, 69);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Location = new System.Drawing.Point(15, 85);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(41, 13);
+            this.label2.Size = new System.Drawing.Size(52, 17);
             this.label2.TabIndex = 2;
             this.label2.Text = "Class:";
             // 
             // Grace
             // 
             this.Grace.AutoSize = true;
-            this.Grace.Location = new System.Drawing.Point(67, 115);
-            this.Grace.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.Grace.Location = new System.Drawing.Point(89, 142);
             this.Grace.Name = "Grace";
-            this.Grace.Size = new System.Drawing.Size(24, 13);
+            this.Grace.Size = new System.Drawing.Size(32, 17);
             this.Grace.TabIndex = 7;
             this.Grace.Text = "hier";
             // 
@@ -96,20 +92,18 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(12, 115);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Location = new System.Drawing.Point(16, 142);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(41, 13);
+            this.label4.Size = new System.Drawing.Size(50, 17);
             this.label4.TabIndex = 6;
             this.label4.Text = "Race:";
             // 
             // Ggender
             // 
             this.Ggender.AutoSize = true;
-            this.Ggender.Location = new System.Drawing.Point(68, 92);
-            this.Ggender.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.Ggender.Location = new System.Drawing.Point(91, 113);
             this.Ggender.Name = "Ggender";
-            this.Ggender.Size = new System.Drawing.Size(24, 13);
+            this.Ggender.Size = new System.Drawing.Size(32, 17);
             this.Ggender.TabIndex = 5;
             this.Ggender.Text = "hier";
             // 
@@ -117,20 +111,18 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(11, 92);
-            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label6.Location = new System.Drawing.Point(15, 113);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(52, 13);
+            this.label6.Size = new System.Drawing.Size(67, 17);
             this.label6.TabIndex = 4;
             this.label6.Text = "Gender:";
             // 
             // Gfaction
             // 
             this.Gfaction.AutoSize = true;
-            this.Gfaction.Location = new System.Drawing.Point(67, 137);
-            this.Gfaction.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.Gfaction.Location = new System.Drawing.Point(89, 169);
             this.Gfaction.Name = "Gfaction";
-            this.Gfaction.Size = new System.Drawing.Size(24, 13);
+            this.Gfaction.Size = new System.Drawing.Size(32, 17);
             this.Gfaction.TabIndex = 9;
             this.Gfaction.Text = "hier";
             // 
@@ -138,18 +130,28 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(12, 137);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Location = new System.Drawing.Point(16, 169);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(53, 13);
+            this.label3.Size = new System.Drawing.Size(66, 17);
             this.label3.TabIndex = 8;
             this.label3.Text = "Faction:";
             // 
+            // Bretry
+            // 
+            this.Bretry.Location = new System.Drawing.Point(756, 364);
+            this.Bretry.Name = "Bretry";
+            this.Bretry.Size = new System.Drawing.Size(151, 40);
+            this.Bretry.TabIndex = 10;
+            this.Bretry.Text = "Retry";
+            this.Bretry.UseVisualStyleBackColor = true;
+            this.Bretry.Click += new System.EventHandler(this.Bretry_Click);
+            // 
             // generate_form
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(689, 338);
+            this.ClientSize = new System.Drawing.Size(919, 416);
+            this.Controls.Add(this.Bretry);
             this.Controls.Add(this.Gfaction);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.Grace);
@@ -160,7 +162,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.Gname);
             this.Controls.Add(this.name);
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "generate_form";
             this.Text = "Character Generator";
             this.ResumeLayout(false);
@@ -180,5 +182,6 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label Gfaction;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button Bretry;
     }
 }

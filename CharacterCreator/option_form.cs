@@ -21,11 +21,18 @@ namespace CharacterCreator
 
         public void bnext_Click(object sender, EventArgs e)
         {
+            var exclude_c = exclude_classes.SelectedItems;
             this.Hide();
             Fgenerate.test = test;
+            Fgenerate.exclude_c = exclude_c;
             Fgenerate.Generate();
             Fgenerate.ShowDialog();
             this.Close();
+        }
+
+        private void Bexit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

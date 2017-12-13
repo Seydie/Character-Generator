@@ -53,6 +53,7 @@ namespace CharacterCreator
 
         public option_form frm1;
         public string test;
+        public ListBox.SelectedObjectCollection exclude_c;
         public generate_form()
         {
             InitializeComponent();
@@ -60,12 +61,27 @@ namespace CharacterCreator
         public void Generate()
         {
             Ggender.Text = Arraygender[random.Next(Arraygender.Length)];
-            Gclass.Text = Arrayclass[random.Next(Arrayclass.Length)];
-            string race = dict_races.Keys.ToList()[random.Next(dict_races.Count)];
-            string[] race_value = dict_races.Values.ToList()[random.Next(dict_races.Count)];
-            string race_int = race_value[random.Next(race_value.Length)];
-            Grace.Text = race;
-            Grace.Text += " + " + race_int;
+
+            string race_key = dict_races.Keys.ToList()[random.Next(dict_races.Count)];
+            string race_value = dict_races[race_key][random.Next(dict_races[race_key].Length)];
+
+            Grace.Text = race_key;
+            Gclass.Text = race_value;
+            Gclass.Text += exclude_c[0];
+            
+        }
+
+        public void CheckingExclude()
+        {
+            for(int i = 1; i < 10; i++)
+            {
+
+            }
+        }
+
+        private void Bretry_Click(object sender, EventArgs e)
+        {
+            Generate();
         }
     }
 }
