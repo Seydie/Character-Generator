@@ -40,6 +40,9 @@
             this.Tname = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.checkbox_realm = new System.Windows.Forms.CheckBox();
+            this.radio_pvprealm = new System.Windows.Forms.RadioButton();
+            this.radio_bothrealm = new System.Windows.Forms.RadioButton();
+            this.radio_pverealm = new System.Windows.Forms.RadioButton();
             this.SuspendLayout();
             // 
             // bnext
@@ -208,18 +211,57 @@
             // checkbox_realm
             // 
             this.checkbox_realm.AutoSize = true;
-            this.checkbox_realm.Location = new System.Drawing.Point(22, 305);
+            this.checkbox_realm.Location = new System.Drawing.Point(21, 278);
             this.checkbox_realm.Name = "checkbox_realm";
             this.checkbox_realm.Size = new System.Drawing.Size(145, 21);
             this.checkbox_realm.TabIndex = 12;
             this.checkbox_realm.Text = "Randomize Realm";
             this.checkbox_realm.UseVisualStyleBackColor = true;
+            this.checkbox_realm.CheckedChanged += new System.EventHandler(this.checkbox_realm_CheckedChanged);
+            // 
+            // radio_pvprealm
+            // 
+            this.radio_pvprealm.AutoSize = true;
+            this.radio_pvprealm.Enabled = false;
+            this.radio_pvprealm.Location = new System.Drawing.Point(21, 305);
+            this.radio_pvprealm.Name = "radio_pvprealm";
+            this.radio_pvprealm.Size = new System.Drawing.Size(100, 21);
+            this.radio_pvprealm.TabIndex = 13;
+            this.radio_pvprealm.Text = "PVP Realm";
+            this.radio_pvprealm.UseVisualStyleBackColor = true;
+            // 
+            // radio_bothrealm
+            // 
+            this.radio_bothrealm.AutoSize = true;
+            this.radio_bothrealm.Checked = true;
+            this.radio_bothrealm.Enabled = false;
+            this.radio_bothrealm.Location = new System.Drawing.Point(21, 359);
+            this.radio_bothrealm.Name = "radio_bothrealm";
+            this.radio_bothrealm.Size = new System.Drawing.Size(58, 21);
+            this.radio_bothrealm.TabIndex = 14;
+            this.radio_bothrealm.TabStop = true;
+            this.radio_bothrealm.Text = "Both";
+            this.radio_bothrealm.UseVisualStyleBackColor = true;
+            // 
+            // radio_pverealm
+            // 
+            this.radio_pverealm.AutoSize = true;
+            this.radio_pverealm.Enabled = false;
+            this.radio_pverealm.Location = new System.Drawing.Point(21, 332);
+            this.radio_pverealm.Name = "radio_pverealm";
+            this.radio_pverealm.Size = new System.Drawing.Size(100, 21);
+            this.radio_pverealm.TabIndex = 15;
+            this.radio_pverealm.Text = "PVE Realm";
+            this.radio_pverealm.UseVisualStyleBackColor = true;
             // 
             // option_form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(684, 459);
+            this.Controls.Add(this.radio_pverealm);
+            this.Controls.Add(this.radio_bothrealm);
+            this.Controls.Add(this.radio_pvprealm);
             this.Controls.Add(this.checkbox_realm);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.Tname);
@@ -255,6 +297,9 @@
         private System.Windows.Forms.TextBox Tname;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.CheckBox checkbox_realm;
+        private System.Windows.Forms.RadioButton radio_pvprealm;
+        private System.Windows.Forms.RadioButton radio_bothrealm;
+        private System.Windows.Forms.RadioButton radio_pverealm;
     }
 }
 

@@ -43,5 +43,21 @@ namespace CharacterCreator
         {
             Application.Exit();
         }
+
+        private void checkbox_realm_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkbox_realm.Checked)
+            {
+                radio_pvprealm.Enabled = true;
+                radio_pverealm.Enabled = true;
+                radio_bothrealm.Enabled = true;
+            }
+            else
+            {
+                radio_pvprealm.Enabled = false;
+                radio_pverealm.Enabled = false;
+                radio_bothrealm.Enabled = false;
+            }
+        }
     }
 }

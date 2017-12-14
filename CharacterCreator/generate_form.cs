@@ -20,9 +20,8 @@ namespace CharacterCreator
         static Random random = new Random();
         string[] Arraygender = { "Male", "Female" };
         string[] Arrayfaction = { "Alliance", "Horde" };
-        string[] Arraypverealm = { "Aerie Peak", "Aggramar", "Alonsus", "Anachronos" };
-        string[] professions = {"Alchemy", "Blacksmithing", "Enchanting", "Engineering", "Inscription", "Jewelcrafting",
-        "Leatherworking", "Tailoring", "Herbalism", "Mining", "Skinning"};
+        string[] Arraypverealm = { "Aerie Peak", "Aggramar", "Alonsus", "Anachronos", "Arathor", "Argent Dawn", "Aszune", "Azjol-Nerub", "Azuremyst", "Blade's Edge", "Bloodhoof", "Bronze Dragonflight", "Bronzebeard", "Chamber of Aspects", "Darkmoon Faire", "Darkspear", "Doomhammer", "Draenor", "Dragonblight", "Earthen Ring", "Emerald Dream", "Eonar", "Ghostlands", "Hellfire", "Hellscream", "Khadgar", "Kilrogg", "Kul Tiras", "Lightbringer", "Magtheridon", "Mazrigos", "Moonglade", "Nagrand", "Nordrassil", "Quel'Thalas", "Runetotem", "Saurfang", "Shadowsong", "Silvermoon", "Steamwheedle Cartel", "Stormrage", "Terenas", "Terokkar", "The Sha'tar", "Thunderhorn", "Turalyon", "Vek'nilash", "Wildhammer"};
+        string[] professions = { "Alchemy", "Blacksmithing", "Enchanting", "Engineering", "Inscription", "Jewelcrafting", "Leatherworking", "Tailoring", "Herbalism", "Mining", "Skinning"};
 
         Dictionary<string, string[]> dict_races = new Dictionary<string, string[]>()
         {
@@ -145,7 +144,8 @@ namespace CharacterCreator
             }
             else if(exclude_p.Count == 10)
             {
-                Gprof1.Text = exclude_p[0].ToString();
+                Gprof1.Text = "";
+                Gprof2.Text = "";
             }
             else
             {
