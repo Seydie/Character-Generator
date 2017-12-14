@@ -34,7 +34,9 @@
             this.Bexit = new System.Windows.Forms.Button();
             this.exclude_classes = new System.Windows.Forms.CheckedListBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.checkedListBox2 = new System.Windows.Forms.CheckedListBox();
+            this.exclude_races = new System.Windows.Forms.CheckedListBox();
+            this.exclude_professions = new System.Windows.Forms.CheckedListBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // bnext
@@ -57,7 +59,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(13, 13);
+            this.label1.Location = new System.Drawing.Point(13, 14);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(460, 29);
             this.label1.TabIndex = 1;
@@ -67,7 +69,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(15, 77);
+            this.label2.Location = new System.Drawing.Point(15, 78);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(119, 18);
             this.label2.TabIndex = 2;
@@ -108,28 +110,29 @@
             "Druid",
             "Demon Hunter",
             "Death Knight"});
-            this.exclude_classes.Location = new System.Drawing.Point(18, 108);
+            this.exclude_classes.Location = new System.Drawing.Point(19, 108);
+            this.exclude_classes.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.exclude_classes.Name = "exclude_classes";
-            this.exclude_classes.Size = new System.Drawing.Size(150, 140);
+            this.exclude_classes.Size = new System.Drawing.Size(151, 123);
             this.exclude_classes.TabIndex = 4;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(214, 77);
+            this.label3.Location = new System.Drawing.Point(213, 78);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(105, 18);
             this.label3.TabIndex = 5;
             this.label3.Text = "Exclude races:";
             // 
-            // checkedListBox2
+            // exclude_races
             // 
-            this.checkedListBox2.BackColor = System.Drawing.SystemColors.Control;
-            this.checkedListBox2.CheckOnClick = true;
-            this.checkedListBox2.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.checkedListBox2.FormattingEnabled = true;
-            this.checkedListBox2.Items.AddRange(new object[] {
+            this.exclude_races.BackColor = System.Drawing.SystemColors.Control;
+            this.exclude_races.CheckOnClick = true;
+            this.exclude_races.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.exclude_races.FormattingEnabled = true;
+            this.exclude_races.Items.AddRange(new object[] {
             "Human",
             "Dwarf",
             "Night Elf",
@@ -143,17 +146,54 @@
             "Blood Elf",
             "Goblin",
             "Panda"});
-            this.checkedListBox2.Location = new System.Drawing.Point(217, 108);
-            this.checkedListBox2.Name = "checkedListBox2";
-            this.checkedListBox2.Size = new System.Drawing.Size(150, 140);
-            this.checkedListBox2.TabIndex = 6;
+            this.exclude_races.Location = new System.Drawing.Point(217, 108);
+            this.exclude_races.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.exclude_races.Name = "exclude_races";
+            this.exclude_races.Size = new System.Drawing.Size(151, 123);
+            this.exclude_races.TabIndex = 6;
+            // 
+            // exclude_professions
+            // 
+            this.exclude_professions.BackColor = System.Drawing.SystemColors.Control;
+            this.exclude_professions.CheckOnClick = true;
+            this.exclude_professions.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.exclude_professions.FormattingEnabled = true;
+            this.exclude_professions.Items.AddRange(new object[] {
+            "Alchemy",
+            "Blacksmithing",
+            "Enchanting",
+            "Engineering",
+            "Inscription",
+            "Jewelcrafting",
+            "Leatherworking",
+            "Tailoring",
+            "Herbalism",
+            "Mining",
+            "Skinning"});
+            this.exclude_professions.Location = new System.Drawing.Point(417, 108);
+            this.exclude_professions.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.exclude_professions.Name = "exclude_professions";
+            this.exclude_professions.Size = new System.Drawing.Size(151, 123);
+            this.exclude_professions.TabIndex = 8;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(413, 78);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(146, 18);
+            this.label4.TabIndex = 7;
+            this.label4.Text = "Exclude professions:";
             // 
             // option_form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(684, 459);
-            this.Controls.Add(this.checkedListBox2);
+            this.Controls.Add(this.exclude_professions);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.exclude_races);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.exclude_classes);
             this.Controls.Add(this.Bexit);
@@ -177,7 +217,9 @@
         private System.Windows.Forms.Button Bexit;
         private System.Windows.Forms.CheckedListBox exclude_classes;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.CheckedListBox checkedListBox2;
+        private System.Windows.Forms.CheckedListBox exclude_races;
+        private System.Windows.Forms.CheckedListBox exclude_professions;
+        private System.Windows.Forms.Label label4;
     }
 }
 

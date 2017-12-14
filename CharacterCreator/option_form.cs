@@ -12,7 +12,6 @@ namespace CharacterCreator
 {
     public partial class option_form : Form
     {
-        string test = "lol";
         generate_form Fgenerate = new generate_form();
         public option_form()
         {
@@ -21,10 +20,13 @@ namespace CharacterCreator
 
         public void bnext_Click(object sender, EventArgs e)
         {
-            var exclude_c = exclude_classes.SelectedItems;
+            var exclude_c = exclude_classes.CheckedItems;
+            var exclude_r = exclude_races.CheckedItems;
+            var exclude_p = exclude_professions.CheckedItems;
             this.Hide();
-            Fgenerate.test = test;
             Fgenerate.exclude_c = exclude_c;
+            Fgenerate.exclude_r = exclude_r;
+            Fgenerate.exclude_p = exclude_p;
             Fgenerate.Generate();
             Fgenerate.ShowDialog();
             this.Close();
