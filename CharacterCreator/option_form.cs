@@ -12,7 +12,6 @@ namespace CharacterCreator
 {
     public partial class option_form : Form
     {
-        string test = "lol";
         generate_form Fgenerate = new generate_form();
         public option_form()
         {
@@ -21,10 +20,20 @@ namespace CharacterCreator
 
         public void bnext_Click(object sender, EventArgs e)
         {
-            var exclude_c = exclude_classes.SelectedItems;
+            //Values passing to Generate_Form
+            var exclude_c = exclude_classes.CheckedItems;
+            var exclude_r = exclude_races.CheckedItems;
+            var exclude_p = exclude_professions.CheckedItems;
+            string Tnamebox = Tname.Text;
+            bool check_realm = checkbox_realm.Checked;
+            //End passing
+
             this.Hide();
-            Fgenerate.test = test;
             Fgenerate.exclude_c = exclude_c;
+            Fgenerate.exclude_r = exclude_r;
+            Fgenerate.exclude_p = exclude_p;
+            Fgenerate.Tnamebox = Tnamebox;
+            Fgenerate.checkbox_realm = checkbox_realm;
             Fgenerate.Generate();
             Fgenerate.ShowDialog();
             this.Close();
@@ -33,6 +42,22 @@ namespace CharacterCreator
         private void Bexit_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void checkbox_realm_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkbox_realm.Checked)
+            {
+                radio_pvprealm.Enabled = true;
+                radio_pverealm.Enabled = true;
+                radio_bothrealm.Enabled = true;
+            }
+            else
+            {
+                radio_pvprealm.Enabled = false;
+                radio_pverealm.Enabled = false;
+                radio_bothrealm.Enabled = false;
+            }
         }
     }
 }

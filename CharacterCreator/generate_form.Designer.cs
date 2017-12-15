@@ -39,6 +39,14 @@
             this.Gfaction = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.Bretry = new System.Windows.Forms.Button();
+            this.Gprof2 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.Gprof1 = new System.Windows.Forms.Label();
+            this.label = new System.Windows.Forms.Label();
+            this.Bexit = new System.Windows.Forms.Button();
+            this.Bback = new System.Windows.Forms.Button();
+            this.Grealm = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // name
@@ -138,6 +146,7 @@
             // 
             // Bretry
             // 
+            this.Bretry.BackColor = System.Drawing.Color.DarkSlateGray;
             this.Bretry.Location = new System.Drawing.Point(756, 364);
             this.Bretry.Name = "Bretry";
             this.Bretry.Size = new System.Drawing.Size(151, 40);
@@ -146,11 +155,100 @@
             this.Bretry.UseVisualStyleBackColor = true;
             this.Bretry.Click += new System.EventHandler(this.Bretry_Click);
             // 
+            // Gprof2
+            // 
+            this.Gprof2.AutoSize = true;
+            this.Gprof2.Location = new System.Drawing.Point(90, 224);
+            this.Gprof2.Name = "Gprof2";
+            this.Gprof2.Size = new System.Drawing.Size(32, 17);
+            this.Gprof2.TabIndex = 14;
+            this.Gprof2.Text = "hier";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(17, 224);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(43, 17);
+            this.label5.TabIndex = 13;
+            this.label5.Text = "Prof:";
+            // 
+            // Gprof1
+            // 
+            this.Gprof1.AutoSize = true;
+            this.Gprof1.Location = new System.Drawing.Point(90, 197);
+            this.Gprof1.Name = "Gprof1";
+            this.Gprof1.Size = new System.Drawing.Size(32, 17);
+            this.Gprof1.TabIndex = 12;
+            this.Gprof1.Text = "hier";
+            // 
+            // label
+            // 
+            this.label.AutoSize = true;
+            this.label.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label.Location = new System.Drawing.Point(17, 197);
+            this.label.Name = "label";
+            this.label.Size = new System.Drawing.Size(43, 17);
+            this.label.TabIndex = 11;
+            this.label.Text = "Prof:";
+            // 
+            // Bexit
+            // 
+            this.Bexit.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.Bexit.Location = new System.Drawing.Point(175, 364);
+            this.Bexit.Name = "Bexit";
+            this.Bexit.Size = new System.Drawing.Size(149, 39);
+            this.Bexit.TabIndex = 15;
+            this.Bexit.Text = "Exit";
+            this.Bexit.UseVisualStyleBackColor = true;
+            this.Bexit.Click += new System.EventHandler(this.Bexit_Click);
+            // 
+            // Bback
+            // 
+            this.Bback.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.Bback.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Bback.ForeColor = System.Drawing.SystemColors.Window;
+            this.Bback.Location = new System.Drawing.Point(12, 365);
+            this.Bback.Name = "Bback";
+            this.Bback.Size = new System.Drawing.Size(149, 39);
+            this.Bback.TabIndex = 16;
+            this.Bback.Text = "Back";
+            this.Bback.UseVisualStyleBackColor = false;
+            this.Bback.Click += new System.EventHandler(this.Bback_Click);
+            // 
+            // Grealm
+            // 
+            this.Grealm.AutoSize = true;
+            this.Grealm.Location = new System.Drawing.Point(90, 253);
+            this.Grealm.Name = "Grealm";
+            this.Grealm.Size = new System.Drawing.Size(32, 17);
+            this.Grealm.TabIndex = 18;
+            this.Grealm.Text = "hier";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Location = new System.Drawing.Point(17, 253);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(53, 17);
+            this.label14.TabIndex = 17;
+            this.label14.Text = "Realm";
+            // 
             // generate_form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(919, 416);
+            this.Controls.Add(this.Grealm);
+            this.Controls.Add(this.label14);
+            this.Controls.Add(this.Bback);
+            this.Controls.Add(this.Bexit);
+            this.Controls.Add(this.Gprof2);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.Gprof1);
+            this.Controls.Add(this.label);
             this.Controls.Add(this.Bretry);
             this.Controls.Add(this.Gfaction);
             this.Controls.Add(this.label3);
@@ -183,5 +281,13 @@
         private System.Windows.Forms.Label Gfaction;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button Bretry;
+        private System.Windows.Forms.Label Gprof2;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label Gprof1;
+        private System.Windows.Forms.Label label;
+        private System.Windows.Forms.Button Bexit;
+        private System.Windows.Forms.Button Bback;
+        private System.Windows.Forms.Label Grealm;
+        private System.Windows.Forms.Label label14;
     }
 }
