@@ -47,6 +47,10 @@
             this.Bback = new System.Windows.Forms.Button();
             this.Grealm = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
+            this.Gspecialisation = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.Grole = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // name
@@ -236,11 +240,53 @@
             this.label14.TabIndex = 17;
             this.label14.Text = "Realm";
             // 
+            // Gspecialisation
+            // 
+            this.Gspecialisation.AutoSize = true;
+            this.Gspecialisation.Location = new System.Drawing.Point(317, 58);
+            this.Gspecialisation.Name = "Gspecialisation";
+            this.Gspecialisation.Size = new System.Drawing.Size(32, 17);
+            this.Gspecialisation.TabIndex = 20;
+            this.Gspecialisation.Text = "hier";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(202, 58);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(114, 17);
+            this.label7.TabIndex = 19;
+            this.label7.Text = "Specialisation:";
+            // 
+            // Grole
+            // 
+            this.Grole.AutoSize = true;
+            this.Grole.Location = new System.Drawing.Point(317, 85);
+            this.Grole.Name = "Grole";
+            this.Grole.Size = new System.Drawing.Size(32, 17);
+            this.Grole.TabIndex = 22;
+            this.Grole.Text = "hier";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(202, 85);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(46, 17);
+            this.label8.TabIndex = 21;
+            this.label8.Text = "Role:";
+            // 
             // generate_form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(919, 416);
+            this.Controls.Add(this.Grole);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.Gspecialisation);
+            this.Controls.Add(this.label7);
             this.Controls.Add(this.Grealm);
             this.Controls.Add(this.label14);
             this.Controls.Add(this.Bback);
@@ -289,5 +335,9 @@
         private System.Windows.Forms.Button Bback;
         private System.Windows.Forms.Label Grealm;
         private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label Gspecialisation;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label Grole;
+        private System.Windows.Forms.Label label8;
     }
 }
