@@ -23,7 +23,8 @@ namespace CharacterCreator
         static Random random = new Random();
         string[] Arraygender = { "Male", "Female" };
         string[] Arrayfaction = { "Alliance", "Horde" };
-        string[] Arraypverealm = { "Aerie Peak", "Aggramar", "Alonsus", "Anachronos", "Arathor", "Argent Dawn", "Aszune", "Azjol-Nerub", "Azuremyst", "Blade's Edge", "Bloodhoof", "Bronze Dragonflight", "Bronzebeard", "Chamber of Aspects", "Darkmoon Faire", "Darkspear", "Doomhammer", "Draenor", "Dragonblight", "Earthen Ring", "Emerald Dream", "Eonar", "Ghostlands", "Hellfire", "Hellscream", "Khadgar", "Kilrogg", "Kul Tiras", "Lightbringer", "Magtheridon", "Mazrigos", "Moonglade", "Nagrand", "Nordrassil", "Quel'Thalas", "Runetotem", "Saurfang", "Shadowsong", "Silvermoon", "Steamwheedle Cartel", "Stormrage", "Terenas", "Terokkar", "The Sha'tar", "Thunderhorn", "Turalyon", "Vek'nilash", "Wildhammer"};
+        string[] Arraypverealm = { "Aerie Peak", "Aggramar", "Alonsus", "Anachronos", "Arathor", "Argent Dawn", "Aszune", "Azjol-Nerub", "Azuremyst", "Blade's Edge", "Bloodhoof", "Bronze Dragonflight", "Bronzebeard", "Chamber of Aspects", "Darkmoon Faire", "Darkspear", "Doomhammer", "Draenor", "Dragonblight", "Earthen Ring", "Emerald Dream", "Eonar", "Ghostlands", "Hellfire", "Hellscream", "Khadgar", "Kilrogg", "Kul Tiras", "Lightbringer", "Magtheridon", "Mazrigos", "Moonglade", "Nagrand", "Nordrassil", "Quel'Thalas", "Runetotem", "Saurfang", "Shadowsong", "Silvermoon", "Steamwheedle Cartel", "Stormrage", "Terenas", "Terokkar", "The Sha'tar", "Thunderhorn", "Turalyon", "Vek'nilash", "Wildhammer" };
+        string[] Arraypvprealm = { "Agamaggan", "Ahn'Qiraj", "Al'Akir", "Auchindoun", "Balnazzar", "Bladefist", "Bloodfeather", "Bloodscalp", "Boulderfist", "Burning Blade", "Burning Legion", "Burning Steppes", "Chromaggus", "Crushridge", "Daggerspine", "Darksorrow", "Deathwing", "Defias Brotherhood", "Dentarg", "Dragonmaw", "Drak'thul", "Dunemaul", "Emeriss", "Executus", "Frostmane", "Frostwhisper", "Genjuros", "Grim Batol", "Hakkar", "Haomarush", "Jaedenar", "Karazhan", "Kazzak", "Kor'gall", "Laughing Skull", "Lightning's Blade", "Neptulon", "Outland", "Ragnaros", "Ravencrest", "Ravenholdt", "Scarshield Legion", "Shattered Halls", "Shattered Hand", "Skullcrusher", "Spinebreaker", "Sporeggar", "Stormreaver", "Stormscale", "Sunstrider", "Sylvanas", "Talnivarr", "Tarren Mill", "The Maelstrom", "The Venture Co", "Trollbane", "Twilight's Hammer", "Twisting Nether", "Vashj", "Xavius", "Zenedar" };
         string[] professions = { "Alchemy", "Blacksmithing", "Enchanting", "Engineering", "Inscription", "Jewelcrafting", "Leatherworking", "Tailoring", "Herbalism", "Mining", "Skinning"};
 
         Dictionary<string, string[]> dict_races = new Dictionary<string, string[]>()
@@ -239,7 +240,7 @@ namespace CharacterCreator
             if(checkbox_realm.Checked) {
                 if (Rpvprealm.Checked)
                 {
-                    Grealm.Text = Arraypverealm[random.Next(Arraypverealm.Length)];
+                    Grealm.Text = Arraypvprealm[random.Next(Arraypvprealm.Length)];
                 }
                 else if(Rpverealm.Checked)
                 {
@@ -247,7 +248,10 @@ namespace CharacterCreator
                 }
                 else if(Rbothrealm.Checked)
                 {
-                    Grealm.Text = Arraypverealm[random.Next(Arraypverealm.Length)];
+                    string pve = Arraypverealm[random.Next(Arraypverealm.Length)];
+                    string pvp = Arraypvprealm[random.Next(Arraypvprealm.Length)];
+                    string[] randomrealm = { pve, pvp };
+                    Grealm.Text = randomrealm[random.Next(randomrealm.Length)];
                 }
             }
             else
@@ -265,14 +269,6 @@ namespace CharacterCreator
         private void Bexit_Click(object sender, EventArgs e)
         {
             Application.Exit();
-        }
-
-        private void Bback_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            option_form Foption = new option_form();
-            Foption.ShowDialog();
-            this.Close();
         }
     }
 }
