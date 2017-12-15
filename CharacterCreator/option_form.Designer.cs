@@ -52,7 +52,7 @@
             this.bnext.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bnext.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bnext.ForeColor = System.Drawing.SystemColors.Window;
-            this.bnext.Location = new System.Drawing.Point(455, 398);
+            this.bnext.Location = new System.Drawing.Point(355, 399);
             this.bnext.Margin = new System.Windows.Forms.Padding(4);
             this.bnext.Name = "bnext";
             this.bnext.Size = new System.Drawing.Size(216, 47);
@@ -258,7 +258,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(684, 459);
+            this.ClientSize = new System.Drawing.Size(591, 459);
             this.Controls.Add(this.radio_pverealm);
             this.Controls.Add(this.radio_bothrealm);
             this.Controls.Add(this.radio_pvprealm);

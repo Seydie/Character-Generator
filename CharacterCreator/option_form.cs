@@ -26,6 +26,9 @@ namespace CharacterCreator
             var exclude_p = exclude_professions.CheckedItems;
             string Tnamebox = Tname.Text;
             bool check_realm = checkbox_realm.Checked;
+            var Rpvprealm = radio_pvprealm;
+            var Rpverealm = radio_pverealm;
+            var Rbothrealm = radio_bothrealm;
             //End passing
 
             this.Hide();
@@ -34,6 +37,9 @@ namespace CharacterCreator
             Fgenerate.exclude_p = exclude_p;
             Fgenerate.Tnamebox = Tnamebox;
             Fgenerate.checkbox_realm = checkbox_realm;
+            Fgenerate.Rpvprealm = Rpvprealm;
+            Fgenerate.Rpverealm = Rpverealm;
+            Fgenerate.Rbothrealm = Rbothrealm;
             Fgenerate.Generate();
             Fgenerate.ShowDialog();
             this.Close();

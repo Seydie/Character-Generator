@@ -17,6 +17,9 @@ namespace CharacterCreator
         public CheckedListBox.CheckedItemCollection exclude_p;
         public string Tnamebox;
         public CheckBox checkbox_realm;
+        public RadioButton Rpvprealm;
+        public RadioButton Rpverealm;
+        public RadioButton Rbothrealm;
         static Random random = new Random();
         string[] Arraygender = { "Male", "Female" };
         string[] Arrayfaction = { "Alliance", "Horde" };
@@ -67,6 +70,7 @@ namespace CharacterCreator
         {
             string race_key = dict_races.Keys.ToList()[random.Next(dict_races.Count)];
             string race_value = dict_races[race_key][random.Next(dict_races[race_key].Length)];
+            string specalisation = dict_specalisation[race_value][random.Next(dict_specalisation[race_value].Length)];
             string profession1 = professions[random.Next(professions.Length)];
             string profession2 = professions[random.Next(professions.Length)];
 
@@ -95,6 +99,52 @@ namespace CharacterCreator
             }
             //End class
 
+            //Checking specalisation and filling
+            Gspecialisation.Text = specalisation;
+
+            switch(specalisation)
+            {
+                case "Fury":
+                case "Arms":
+                case "Retribution":
+                case "Beast Mastery":
+                case "Marksmanship":
+                case "Survival":
+                case "Assassination":
+                case "Outlaw":
+                case "Subtlety":
+                case "Elemental":
+                case "Enhancement":
+                case "Arcane":
+                case "Fire":
+                case "Frost":
+                case "Shadow":
+                case "Affliction":
+                case "Demonology":
+                case "Destruction":
+                case "Windwalker":
+                case "Feral":
+                case "Balance":
+                case "Unholy":
+                case "Havoc":
+                    Grole.Text = "Damage";
+                    break;
+                case "Protection":
+                case "Brewmaster":
+                case "Guardian":
+                case "Blood":
+                case "Vengeance":
+                    Grole.Text = "Tank";
+                    break;
+                case "Holy":
+                case "Restoration":
+                case "Discipline":
+                case "Mistweaver":
+                    Grole.Text = "Heal";
+                    break;
+            }
+            //End specalisation
+
             //Checking race and filling
             if (exclude_r.Count != 0)
             {
@@ -120,7 +170,6 @@ namespace CharacterCreator
             //Checking profession and filling
             if (exclude_p.Count != 0 && exclude_p.Count != 10)
             {
-
                 if (profession1 != profession2)
                 {
                     for(int i = 0; i < exclude_p.Count; i++)
@@ -188,7 +237,18 @@ namespace CharacterCreator
 
             //Checking realm and filling
             if(checkbox_realm.Checked) {
-                Grealm.Text = Arraypverealm[random.Next(Arraypverealm.Length)];
+                if (Rpvprealm.Checked)
+                {
+                    Grealm.Text = Arraypverealm[random.Next(Arraypverealm.Length)];
+                }
+                else if(Rpverealm.Checked)
+                {
+                    Grealm.Text = Arraypverealm[random.Next(Arraypverealm.Length)];
+                }
+                else if(Rbothrealm.Checked)
+                {
+                    Grealm.Text = Arraypverealm[random.Next(Arraypverealm.Length)];
+                }
             }
             else
             {
